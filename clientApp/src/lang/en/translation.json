@@ -1,0 +1,23 @@
+{
+    "appBar": {
+        "altTitle": "React Starter",
+        "title": "Nikola Popovic",
+        "subtitle": "Web Developer"
+    },
+    "general": {
+        "add": "Add",
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "delete": "Delete",
+        "update": "Update"
+    },
+    "homepage": {
+        "title": "This is the homepage"
+    },
+    "nav": {
+        "aboutMe": "About Me",
+        "contact": "Contact",
+        "home": "Home",
+        "projects": "Projects"
+    }
+}
