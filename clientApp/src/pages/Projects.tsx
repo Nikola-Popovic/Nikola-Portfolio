@@ -4,32 +4,32 @@ import i18next from '../shared/lang/i18next';
 import styled from 'styled-components';
 import PinnedSubheaderList, { ISubHeaderProps } from '../shared/components/PinnedSubheaderList';
 
-const AlignEndContainer = styled.div`
+const AlignCenter = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 `;
 
-export function Homepage() {
+export function Projects() {
   const { t } = useTranslation('translation', { i18n: i18next });
   const subHeaders : ISubHeaderProps[] = [
     {
-      title: t('homepage.subheader1.title'),
+      title: t('projects.subheader1.title'),
       subList: [
-        t('homepage.subheader1.sublist1'),
-        t('homepage.subheader1.sublist2'),
-        t('homepage.subheader1.sublist3')
+        t('projects.subheader1.subitem1'),
+        t('projects.subheader1.subitem2'),
+        t('projects.subheader1.subitem3')
       ]
     },
     {
-      title: t('homepage.subheader2.title'),
+      title: t('projects.subheader2.title'),
       subList: [
-        t('homepage.subheader2.sublist1'),
-        t('homepage.subheader2.sublist2'),
-        t('homepage.subheader2.sublist3')
+        t('projects.subheader2.subitem1'),
+        t('projects.subheader2.subitem2'),
+        t('projects.subheader2.subitem3')
       ]
     }
   ];
-  return <>
+  return <AlignCenter>
     <PinnedSubheaderList subHeaders={subHeaders}/>
-  </>;
+  </AlignCenter>;
 }

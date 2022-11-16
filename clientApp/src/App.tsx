@@ -12,10 +12,11 @@ const AppContainer = styled.div`
 `;
 
 function App() {
+  const [isNavBarVisible, setIsNavBarVisible] = React.useState(false);
   return (
     <div className="App">
-      <AppBar></AppBar>
-      <NavBar></NavBar>
+      <AppBar onClick={() => setIsNavBarVisible(!isNavBarVisible)}></AppBar>
+      <NavBar isVisible={isNavBarVisible}></NavBar>
       <AppContainer>
         <PageContent></PageContent>
       </AppContainer>

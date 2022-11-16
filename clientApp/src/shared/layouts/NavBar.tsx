@@ -7,7 +7,7 @@ import i18next from '../lang/i18next';
 
 export const APP_BAR_HEIGHT = '5vh';
 
-const Bar = styled.div`
+const Bar = styled.div<{isVisible: boolean}>`
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -18,6 +18,8 @@ const Bar = styled.div`
     justify-content: center;
     font-family: ${FONT_FAMILLY};
     background-color: ${ColorConstants.PrimaryAccent};
+    visibility: ${props => props.isVisible ? 'visible' : 'hidden'};
+    animation: ${props => props.isVisible ? 'slideIn 1s ease-in-out' : 'slideOut 1s ease-in-out'};
 `;
 
 const NavLink = styled.a`
@@ -53,12 +55,17 @@ const NavLink = styled.a`
         transform: translate3d(0, 0, 0);
     }
 `;
-export function NavBar() {
+
+export interface INavBarProps {
+    isVisible: boolean;
+}
+
+export function NavBar(props : INavBarProps) {
   const { t } = useTranslation('translation', { i18n: i18next });
-  return <Bar>
-    <NavLink> {t('nav.home')} </NavLink>
-    <NavLink> {t('nav.aboutMe')} </NavLink>
-    <NavLink> {t('nav.projects')} </NavLink>
-    <NavLink> {t('nav.contact')} </NavLink>
+  return <Bar isVisible={props.isVisible}>
+    <NavLink id='home' href='/'> {t('nav.home')} </NavLink>
+    <NavLink id='aboutme' href='aboutMe'> {t('nav.aboutMe')} </NavLink>
+    <NavLink id='projects' href='projects'> {t('nav.projects')} </NavLink>
+    <NavLink id='contact' href='contact'> {t('nav.contact')} </NavLink>
   </Bar>;
 }

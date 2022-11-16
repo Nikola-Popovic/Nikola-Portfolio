@@ -19,5 +19,25 @@
         "contact": "Contact",
         "home": "Home",
         "projects": "Projects"
+    },
+    "projects": {
+        "subheader1": {
+            "title": "Backbone Boulder",
+            "subitem1": "POS solution for local Bouldering businesses with a focus on simplicity and ease of use.",
+            "subitem2": "Developped in the winter of 2021.",
+            "subitem3": "Built with: Docker, C# (.Net 5), PostgreSQL and React"
+        },
+        "subheader2": {
+            "title": "Multiplayer Bingo",
+            "subitem1": "Bingo with multiplayer support that matches with nearby players.",
+            "subitem2": "Developped in the autmn of 2020",
+            "subitem3": "Built with: Docker, Java, Android Studio, Firebase, Node"
+        },
+        "subheader3": {
+            "title": "Multiplayer Bingo",
+            "subitem1": "Subitem 1",
+            "subitem2": "Subitem 2",
+            "subitem3": "Subitem 3"
+        }
     }
 }
